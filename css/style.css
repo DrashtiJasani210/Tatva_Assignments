@@ -1,12 +1,18 @@
 *{
   background: #fafafa 0% 0% no-repeat padding-box;
 }
-.flex-container {
+.main-container
+{
+  height: 100vh;
   display: flex;
-  max-width: 1560px;
-  max-height: 720px;
+}
+.flex-container {
+  background-color: #FAFAFA;
+  display: flex;
+  width: 1560px;
+  height: 720px;
   margin: auto;
-  
+  justify-self: baseline;
 }
 
 .logo-img {
@@ -22,6 +28,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 106px;
+}
+
+.content .logo{
+  height: 58px;
+  width: 272px;
 }
 
 .tagline {
