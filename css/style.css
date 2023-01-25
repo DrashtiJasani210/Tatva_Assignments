@@ -1,5 +1,6 @@
 *{
   background: #fafafa 0% 0% no-repeat padding-box;
+  font-family: Roboto;
 }
 .main-container
 {
@@ -113,4 +114,69 @@ form.login-form .submit .forgotpass {
 
 .new-register {
   color: #c8242f;
+}
+
+
+/* For DashBoard */
+
+Header{
+  display: flex;
+  height: 80px;
+  width: 1560px;
+}
+
+Header .menu-bar
+{
+  margin-top: 34px;
+}
+
+Header .logo{
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 142px;
+  height: 30px;
+}
+Header .flex-left
+{
+  width: 242px;
+}
+
+Header .flex-right{
+  width: 1318px;
+  display: flex;
+  justify-content: space-between;
+}
+
+Header .search{
+  height: 16px;
+  width: 16px;
+  margin-top: 32px;
+}
+Header .search-txt
+{
+  color: black;
+  height: 20px;
+  margin-top: 28px;
+  margin-left: 15px;
+  font-size: 16px;
+  border: none;
+}
+Header .search-txt::placeholder{
+  color: black;
+}
+
+Header .notification{
+  margin-top: 29px;
+}
+
+Header .profile{
+  margin-top: 18px;
+  margin-left: 52px;
+  height: 44px;
+  width: 44px;
+}
+
+Header .profile-drop{
+  border: none;
+  vertical-align: middle;
 }
