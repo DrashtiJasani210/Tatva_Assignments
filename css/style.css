@@ -1,19 +1,20 @@
 *{
-  background: #fafafa 0% 0% no-repeat padding-box;
   font-family: Roboto;
 }
 .main-container
 {
+  background: #fafafa 0% 0% no-repeat padding-box;
   height: 100vh;
   display: flex;
 }
 .flex-container {
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
   display: flex;
-  width: 1560px;
+  justify-content: center;
+  /* width: 1560px; */
   height: 720px;
+  width: 100%;
   margin: auto;
-  justify-self: baseline;
 }
 
 .logo-img {
@@ -119,19 +120,21 @@ form.login-form .submit .forgotpass {
 
 /* For DashBoard */
 
+.dashboard-container
+{
+  /* width: 1560px; */
+  height: 720px;
+  width: 100%;
+  margin: auto;
+}
 Header{
   display: flex;
+  align-items: center;
   height: 80px;
-  width: 1560px;
-}
-
-Header .menu-bar
-{
-  margin-top: 34px;
+  width: 100%;
 }
 
 Header .logo{
-  margin-top: 25px;
   margin-left: 25px;
   width: 142px;
   height: 30px;
@@ -142,21 +145,22 @@ Header .flex-left
 }
 
 Header .flex-right{
-  width: 1318px;
+  /* width in pixel */
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 Header .search{
+  margin-left: 49px;
   height: 16px;
   width: 16px;
-  margin-top: 32px;
 }
 Header .search-txt
 {
   color: black;
   height: 20px;
-  margin-top: 28px;
   margin-left: 15px;
   font-size: 16px;
   border: none;
@@ -165,18 +169,61 @@ Header .search-txt::placeholder{
   color: black;
 }
 
-Header .notification{
-  margin-top: 29px;
+Header .flex-right .right-panel{
+  display: flex;
+  align-items: center;
 }
 
-Header .profile{
-  margin-top: 18px;
+.profile{
   margin-left: 52px;
   height: 44px;
   width: 44px;
 }
 
-Header .profile-drop{
-  border: none;
-  vertical-align: middle;
+.profile-text{
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.arrow{
+  margin-left: 15px;
+}
+
+.main
+{
+  display: flex;
+}
+
+.main .side-bar
+{
+  display: flex;
+  width: 242px;
+  flex-direction: column;
+}
+
+.main .side-bar .side-bar-item
+{
+  display: flex;
+  width: 183px;
+  height: 43px;
+  align-items: center;
+  margin-left: 30px;
+  padding-left: 18px;
+  border-radius: 5px;
+}
+.main .side-bar .side-bar-item .sidebar-item-icon{
+  height: 16px;
+  width: 16px;
+}
+
+.main .side-bar .side-bar-item .sidebar-item-text{
+  font-size: 16px;
+  margin-left: 13px;
+  color: #3E3E3E;
+}
+
+.item-1
+{
+  margin-top: 25px;
+  background-color: #FFF3F4;
 }
