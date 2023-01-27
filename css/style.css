@@ -439,3 +439,72 @@ li span{
 #last-row{
   border-color: #ffffff;
 }
+
+/* Inner-Page CSS */
+.innerpage-container {
+  width: 1560px; 
+  height: 1970px;
+  margin: auto;
+}
+.item-2{
+  background-color: #fff3f4;
+}
+
+.main-dashboard .main-form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-top: 23px;
+  background-color: #FFFFFF;
+  width: 1218px;
+  height: 1749px;
+  padding-left: 29px;
+  padding-right: 30px;
+  padding-top: 23px;
+}
+
+.main-form .col-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 44px;
+}
+
+.main-form .col-box .head-text{
+  color:#3E3E3E;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.main-form .col-box .txt-control{
+  border-color: #ADADAD;
+  border-radius: 4.5px;
+  height: 49px;
+  color: #3E3E3E;
+}
+.main-form .col-box .txt-control::placeholder{
+  color: #ADADAD;
+}
+
+.main-form .col-box .multiline-control{
+  border-color: #ADADAD;
+  border-radius: 4.5px;
+  color: #3E3E3E;
+  margin-top: 21px;
+}
+.main-form .col-box .txt-control::placeholder{
+  color: #ADADAD;
+}
+
+.main-form .col-box .multiline-control::placeholder{
+  color: #ADADAD;
+}
+
+.main-form .col-box .disable-control{
+  border-color: #ADADAD;
+  border-radius: 4.5px;
+  height: 49px;
+  color: #ADADAD;
+  border-style: dashed;
+}
