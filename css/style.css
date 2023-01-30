@@ -1,5 +1,6 @@
 * {
   font-family: Roboto;
+  box-sizing: unset;
 }
 
 .main-container {
@@ -151,8 +152,14 @@ Header .logo {
   height: 30px;
 }
 
+Header #check {
+  position: absolute;
+  display: none;
+}
+
 Header .flex-left {
   width: 242px;
+  justify-content: center;
 }
 
 Header .flex-right {
@@ -537,8 +544,8 @@ li span {
   top: 13px;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+.control input:focus ~ label,
+.control input:valid ~ label {
   background-color: #ffffff;
   font-size: 12px;
   padding-left: 5px;
@@ -546,7 +553,7 @@ input:valid ~ label {
   transform: translateX(-7px) translateY(-24px);
 }
 
-input:focus {
+.control input:focus {
   outline: 1px solid #c8242f;
 }
 
@@ -577,8 +584,8 @@ input:focus {
   top: 34px;
 }
 
-textarea:focus ~ label,
-textarea:valid ~ label {
+.control textarea:focus ~ label,
+.control textarea:valid ~ label {
   background-color: #ffffff;
   font-size: 12px;
   padding-left: 5px;
@@ -586,7 +593,7 @@ textarea:valid ~ label {
   transform: translateX(-7px) translateY(-24px);
 }
 
-textarea:focus {
+.control textarea:focus {
   outline: 1px solid #c8242f;
 }
 
@@ -842,6 +849,52 @@ input[type="checkbox"] {
     /* min-height: 720px; */
     align-items: center;
   }
+
+  /* Dashboard-Page */
+  .main .side-bar {
+    display: none;
+  }
+  /* .main .side-bar .side-bar-item{
+    
+  } */
+  Header:has(#check:checked) ~ .main .side-bar {
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  Header:has(#check:checked) ~ .main {
+    position: relative;
+  }
+  Header .flex-left {
+    width: 400px;
+    justify-content: center;
+    transform: scale(1.5,1.5);
+    transform-origin: left;
+  }
+
+  .main{
+    box-sizing: content-box;
+  }
+
+  Header .flex-right div{
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+  }
+  Header .flex-right .right-panel{
+    transform: scale(1.1,1.1) translateX(-50px);
+    transform-origin: top left;
+  }
+  /* .main-dashboard .heading{
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+  } */
+
+  /* .main-dashboard . */
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -855,11 +908,52 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 100px;
   }
-  .flex-container .logo-img{
-    transform: scale(2,2) translateY(180px);
+  .flex-container .logo-img {
+    transform: scale(2, 2) translateY(180px);
   }
-  .flex-container .content{
-    transform: scale(2,2) translateY(420px);
+  .flex-container .content {
+    transform: scale(2, 2) translateY(420px);
+  }
+
+  /* Dashboard-page */
+  .main .side-bar {
+    display: none;
+  }
+  Header:has(#check:checked) ~ .main .side-bar {
+    transform: scale(2.5,2.5);
+    transform-origin: top left;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  Header:has(#check:checked) ~ .main {
+    position: relative;
+  }
+  Header .flex-left {
+    width: 90px;
+    justify-content: center;
+    transform: scale(2,2);
+    transform-origin: left;
+  }
+  Header .flex-left .logo{
+    display: none;
+  }
+  Header .flex-right div{
+    transform: scale(2,2);
+    transform-origin: left;
+  }
+  Header .search{
+    margin-left: 0px;
+  }
+  Header .search-txt{
+    margin-left: 5px;
+  }
+  Header .flex-right .right-panel{
+    transform: scale(1.2,1.2) translateX(-100px);
+    /* transform-origin: ; */
   }
 }
 
@@ -875,14 +969,14 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 100px;
   }
-  .flex-container .logo-img{
-    transform: scale(0.7,0.7) translateY(260px);
+  .flex-container .logo-img {
+    transform: scale(0.7, 0.7) translateY(260px);
   }
-  .flex-container .content{
-    transform: scale(0.7,0.7) translateY(-170px);
+  .flex-container .content {
+    transform: scale(0.7, 0.7) translateY(-170px);
   }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
   /* Login-Page */
   .main-container {
     min-width: 320px;
@@ -894,10 +988,10 @@ input[type="checkbox"] {
     align-items: center;
     margin-bottom: 100px;
   }
-  .flex-container .logo-img{
-    transform: scale(0.5,0.5) translateY(260px);
+  .flex-container .logo-img {
+    transform: scale(0.5, 0.5) translateY(260px);
   }
-  .flex-container .content{
-    transform: scale(0.5,0.5) translateY(-552px);
+  .flex-container .content {
+    transform: scale(0.5, 0.5) translateY(-552px);
   }
 }
