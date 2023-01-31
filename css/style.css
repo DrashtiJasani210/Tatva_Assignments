@@ -1,6 +1,5 @@
 * {
   font-family: Roboto;
-  box-sizing: unset;
 }
 
 .main-container {
@@ -130,11 +129,12 @@ form.login-form .submit .forgotpass {
 .dashboard-main-container {
   background: #ffffff 0% 0% no-repeat padding-box;
   height: 100vh;
-  display: flex;
+  /* display: flex; */
 }
 
 .dashboard-container {
-  width: 1560px;
+  /* width: 1560px; */
+  max-width: 1560px;
   height: 1360px;
   margin: auto;
 }
@@ -277,7 +277,10 @@ Header .flex-right .right-panel {
   margin-left: 30px;
   justify-content: center;
 }
-
+.main-dashboard .product-list .product-item .product-content{
+  display: flex;
+  align-items: center;
+}
 .main-dashboard .product-list .product-item .icon {
   height: 33px;
   width: 33px;
@@ -411,15 +414,14 @@ li span {
 .main-dashboard .invoices {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 92%;
   margin-left: 50px;
   margin-top: 30px;
   background-color: #ffffff;
   padding-top: 23px;
   padding-left: 29px;
   padding-right: 29px;
-  width: 1217px;
-  height: 558px;
+  /* height: 558px; */
 }
 
 .main-dashboard .invoices .invoices-header {
@@ -831,32 +833,154 @@ input[type="checkbox"] {
 }
 
 /* Responsive Designs*/
-/* @media screen and (min-width:1024px) and (max-width:1520px){
-.main-container{
+@media screen and (min-width: 1200px) and (max-width: 1455px) {
 
-}
-} */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Login-Page */
-  .main-container {
-    min-width: 1023px;
-    /* min-height: 720px; */
-    width: 100%;
-  }
-  .flex-container {
-    /* width: 100%; */
-    min-width: 1023px;
-    /* min-height: 720px; */
-    align-items: center;
-  }
-
-  /* Dashboard-Page */
+  /* Dashboard-Header */
   .main .side-bar {
     display: none;
   }
-  /* .main .side-bar .side-bar-item{
-    
-  } */
+ 
+  Header:has(#check:checked) ~ .main .side-bar {
+    transform: scale(1.1,1.1);
+    transform-origin: top left;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  Header:has(#check:checked) ~ .main {
+    position: relative;
+  }
+  Header .flex-left {
+    width: 400px;
+    justify-content: center;
+    transform: scale(1.1,1.1);
+    transform-origin: left;
+  }
+
+  .main{
+    box-sizing: content-box;
+  }
+
+  Header .flex-right div{
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+  }
+  Header .flex-right .right-panel{
+    transform: scale(1.1,1.1) translateX(-50px);
+    transform-origin: top left;
+  }
+  /* Dshboard-main */
+  .main-dashboard .product-list{
+    margin-left: 0px;
+    justify-content: space-around;
+  }
+  .main-dashboard .product-list .product-item{
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .main-dashboard .sales-section{
+    margin-left: 0px;
+    justify-content: space-evenly;
+  }
+  .main-dashboard .sales-section .sale{
+    width: 775px;
+  }
+  .main-dashboard .sales-section .sale-by-country{
+    margin-left: 15px;
+  }
+  .main-dashboard .invoices{
+    margin-left: 0px;
+    width: 98%;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px){
+ /* Dashboard-Header */
+ .main .side-bar {
+  display: none;
+}
+
+Header:has(#check:checked) ~ .main .side-bar {
+  transform: scale(1.5,1.5);
+  transform-origin: top left;
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+Header:has(#check:checked) ~ .main {
+  position: relative;
+}
+Header .flex-left {
+  width: 400px;
+  justify-content: center;
+  transform: scale(1.4,1.4);
+  transform-origin: left;
+}
+
+Header .flex-right div{
+  transform: scale(1.4,1.4);
+  transform-origin: top left;
+}
+Header .flex-right .right-panel{
+  transform: scale(1.1,1.1) translateX(-50px);
+  transform-origin: top left;
+}
+/* Dashboard-main */
+.main-dashboard .product-list{
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-left: 0px;
+}
+.main-dashboard .product-list .product-item{
+  margin-left: 0px;
+  width: 180px;
+}
+.main-dashboard .sales-section{
+  margin-left: 0px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.main-dashboard .sales-section .sale{
+  width: 62%;
+}
+.main-dashboard .sales-section .sale .sale-chart{
+  width: 100%;
+}
+.main-dashboard .sales-section .sale .sale-chart img{
+  width: 100%;
+}
+.main-dashboard .sales-section .sale-by-country{
+  width: 33%;
+  margin-left: 0px;
+}
+.main-dashboard .invoices{
+  margin-left: 0px;
+  width: 98%;
+  align-self: center;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Login-Page */
+  .main-container {
+    min-width: 1023px;
+    width: 100%;
+  }
+  .flex-container {
+    min-width: 1023px;
+    align-items: center;
+  }
+
+  /* Dashboard-Header */
+  .main .side-bar {
+    display: none;
+  }
+ 
   Header:has(#check:checked) ~ .main .side-bar {
     transform: scale(1.5,1.5);
     transform-origin: top left;
@@ -889,15 +1013,56 @@ input[type="checkbox"] {
     transform: scale(1.1,1.1) translateX(-50px);
     transform-origin: top left;
   }
-  /* .main-dashboard .heading{
-    transform: scale(1.5,1.5);
-    transform-origin: top left;
-  } */
 
-  /* .main-dashboard . */
+  Header .flex-right #notification{
+    display: none;
+  }
+
+  /* Dashboard-Main */
+  .main-dashboard .product-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    margin-left: 0px;
+    justify-content: space-evenly;
+  }
+  .main-dashboard .product-list .product-item{
+    margin-left: 0px;
+    width: 230px;
+  }
+  .main-dashboard .sales-section{
+    flex-direction: column;
+    margin-left: 0px;
+    width: 100%;
+    align-items: center;
+  }
+  .main-dashboard .sales-section .sale{
+    width: 95%;
+    justify-content: center;
+  }
+  .main-dashboard .sales-section .sale .sale-chart{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale .sale-chart img{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale-by-country{
+    width: 95%;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-top: 10px;
+  }
+  .main-dashboard .sales-section .sale-by-country ul{
+    align-self: center;
+  }
+  .main-dashboard .invoices{
+    margin-left: 0px;
+    width: 95%;
+    align-self: center;
+  }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 641px) and (max-width: 767px) {
   /* Login-Page */
   .main-container {
     height: 100%;
@@ -915,12 +1080,13 @@ input[type="checkbox"] {
     transform: scale(2, 2) translateY(420px);
   }
 
-  /* Dashboard-page */
+  
+  /* Dashboard-sidebar */
   .main .side-bar {
     display: none;
   }
   Header:has(#check:checked) ~ .main .side-bar {
-    transform: scale(2.5,2.5);
+    transform: scale(1.5,1.5);
     transform-origin: top left;
     background-color: #ffffff;
     height: 100%;
@@ -928,35 +1094,221 @@ input[type="checkbox"] {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
   }
   Header:has(#check:checked) ~ .main {
     position: relative;
   }
-  Header .flex-left {
-    width: 90px;
-    justify-content: center;
-    transform: scale(2,2);
-    transform-origin: left;
+  Header{
+    height: 100px;
   }
-  Header .flex-left .logo{
+  Header .flex-left {
+    z-index: 1;
+    background-color: #FFFFFF;
+    justify-content: center;
+    width: 484px;
+    transform: scale(1.5,1.5);
+    transform-origin: left top;
+    margin-left: 25px;
+  }
+  Header:has(#check:checked)  .flex-right .search{
+    display: none;
+  }
+  Header:has(#check:not(:checked)) .flex-left{
+    width: 60px;
+  }
+  Header:has(#check:not(:checked)) .flex-left .logo{
     display: none;
   }
   Header .flex-right div{
-    transform: scale(2,2);
-    transform-origin: left;
+    transform: scale(1.5,1.5);
+    z-index: 0;
   }
-  Header .search{
-    margin-left: 0px;
-  }
-  Header .search-txt{
-    margin-left: 5px;
+  Header .flex-right{
+    justify-content: flex-end;
   }
   Header .flex-right .right-panel{
-    transform: scale(1.2,1.2) translateX(-100px);
-    /* transform-origin: ; */
+    transform: scale(1.2,1.2) translateX(-45px);
+    transform-origin: left;
+  }
+  Header .flex-right #notification{
+    display: none;
+  }
+  Header .search-txt{
+    margin-left: 0;
+  }
+
+
+  /* Dashboard-Main */
+  .main-dashboard .heading{
+    font-size: 30px;
+  }
+
+  .main-dashboard .product-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    margin-left: 0px;
+    justify-content: space-evenly;
+  }
+  .main-dashboard .product-list .product-item{
+    margin-left: 0px;
+    width: 180px;
+  }
+  .main-dashboard .product-list .product-item .product-content{
+    scale: 0.8 0.8;
+  }
+  .main-dashboard .sales-section{
+    flex-direction: column;
+    margin-left: 0px;
+    width: 100%;
+    align-items: center;
+  }
+  .main-dashboard .sales-section .sale{
+    width: 95%;
+    justify-content: start;
+  }
+  .main-dashboard .sales-section .sale .sale-chart{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale .sale-chart img{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale-by-country{
+    width: 95%;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-top: 10px;
+  }
+  .main-dashboard .sales-section .sale-by-country ul{
+    align-self: center;
+  }
+  .main-dashboard .invoices{
+    margin-left: 0px;
+    width: 95%;
+    align-self: center;
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 640px){
+  /* Dashboard-sidebar */
+  .main .side-bar {
+    display: none;
+  }
+  Header:has(#check:checked) ~ .main .side-bar {
+    transform: scale(2,2);
+    transform-origin: top left;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  Header:has(#check:checked) ~ .main {
+    position: relative;
+  }
+  Header{
+    height: 100px;
+  }
+  Header .flex-left {
+    z-index: 1;
+    background-color: #FFFFFF;
+    justify-content: center;
+    width: 484px;
+    transform: scale(1.5,1.5);
+    transform-origin: left top;
+    margin-left: 65px;
+  }
+  Header .flex-right .search{
+    display: none;
+  }
+  Header .flex-right .search-txt{
+    display: none;
+  }
+  Header:has(#check:not(:checked)) .flex-left{
+    width: 60px;
+  }
+  Header:has(#check:not(:checked)) .flex-left .logo{
+    display: none;
+  }
+  Header .flex-right{
+    justify-content: flex-end;
+  }
+  Header .flex-right .right-panel{
+    transform: scale(1.2,1.2) translateX(-45px);
+    transform-origin: left;
+  }
+  Header:has(#check:checked) .flex-right .right-panel{
+    display: none;
+  }
+  Header .flex-right #notification{
+    display: none;
+  }
+  Header .search-txt{
+    margin-left: 0;
+  }
+  /* Dashboard-Main */
+  .main-dashboard .heading{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .main-dashboard .product-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+  }
+  .main-dashboard .product-list .product-item{
+    margin-left: 0px;
+    width: 140px;
+  }
+  .main-dashboard .product-list .product-item .product-content{
+    scale: 0.8 0.8;
+  }
+  .main-dashboard .sales-section{
+    flex-direction: column;
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .main-dashboard .sales-section .sale{
+    width: 95%;
+    height: 100%;
+    justify-content: start;
+  }
+  .main-dashboard .sales-section .sale .sale-chart{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale .sale-chart img{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale-by-country{
+    width: 95%;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-top: 10px;
+  }
+  .main-dashboard .sales-section .sale-by-country ul{
+    align-self: center;
+  }
+  #ul-chart-list{
+    min-width: 410px;
+  }
+  .main-dashboard .invoices{
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-top: 10px;
+    width: 95%;
+    align-self: center;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 480px) {
   /* Login-Page */
   .main-container {
@@ -975,23 +1327,140 @@ input[type="checkbox"] {
   .flex-container .content {
     transform: scale(0.7, 0.7) translateY(-170px);
   }
-}
-@media screen and (max-width: 320px) {
-  /* Login-Page */
-  .main-container {
-    min-width: 320px;
+
+  /* Dashboard-page */
+  .main .side-bar {
+    display: none;
+  }
+  Header:has(#check:checked) ~ .main .side-bar {
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+    background-color: #ffffff;
     height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
   }
-  .flex-container {
+  Header:has(#check:checked) ~ .main {
+    position: relative;
+  }
+  Header .flex-left {
+    justify-content: center;
+    transform: scale(1.5,1.5);
+    transform-origin: left;
+    margin-left: 5px;
+  }
+  Header .flex-left .logo{
+    margin-left: 25px;
+    display: none;
+  }
+  Header .flex-right div{
+    display: none;
+  }
+  Header .flex-right{
+    justify-content: flex-end;
+  }
+  .right-panel :not(.profile){
+    display: none;
+  }
+
+  /* Dashboard-Main */
+  .main-dashboard .heading{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .main-dashboard .product-list{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+  }
+  .main-dashboard .product-list .product-item{
+    margin-left: 0px;
+    width: 140px;
+  }
+  .main-dashboard .product-list .product-item .product-content{
+    scale: 0.8 0.8;
+  }
+  .main-dashboard .sales-section{
     flex-direction: column;
-    height: 100vh;
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 10px;
     align-items: center;
-    margin-bottom: 100px;
   }
-  .flex-container .logo-img {
-    transform: scale(0.5, 0.5) translateY(260px);
+  .main-dashboard .sales-section .sale{
+    width: 95%;
+    height: 100%;
+    justify-content: start;
   }
-  .flex-container .content {
-    transform: scale(0.5, 0.5) translateY(-552px);
+  .main-dashboard .sales-section .sale .sale-nav{
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .main-dashboard .sales-section .sale .sale-nav .navbar{
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+  .main-dashboard .sales-section .sale .sale-nav .sale-text{
+    font-size: 15px;
+  }
+  .main-dashboard .sales-section .sale .sale-nav .navbar .navbar-item{
+    margin-right: 10px;
+  }
+  .main-dashboard .sales-section .sale .sale-nav .navbar .navbar-item .navbar-link{
+    font-size: 8px;
+  }
+  .main-dashboard .sales-section .sale .sale-chart{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale .sale-chart img{
+    width: 100%;
+  }
+  .main-dashboard .sales-section .sale-by-country{
+    width: 95%;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .main-dashboard .sales-section .sale-by-country .sale-by-country-text{
+    font-size: 15px;
+  }
+  .main-dashboard .sales-section .sale-by-country .chart{
+    margin-top: 0px;
+  }
+  .main-dashboard .sales-section .sale-by-country ul{
+    align-self: center;
+  }
+  #ul-chart-list{
+    min-width: 180px;
+    column-count: 1;
+  }
+  .main-dashboard .invoices{
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-top: 10px;
+    width: 95%;
+    align-self: center;
+  }
+  .main-dashboard .invoices .invoices-header .invoices-text{
+    font-size: 15px;
+  }
+  .main-dashboard .invoices .invoices-header .view-all{
+    font-size: 10px;
+  }
+  .main-dashboard .invoices .custom-table{
+    margin-top: 10px;
+  }
+  .main-dashboard .invoices .custom-table .data{
+    font-size: 12px;
   }
 }
