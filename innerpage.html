@@ -15,7 +15,10 @@
     <div class="innerpage-container">
       <header>
         <div class="flex-left">
-          <img src="images/menu-bar.svg" alt="menu bar">
+          <input type="checkbox" id="check" />
+            <label for="check"
+              ><img src="images/menu-bar.svg" alt="menu bar" id="menu-bar"
+            /></label>
           <img src="images/logo.svg" alt="logo" class="logo">
         </div>
         <div class="flex-right">
@@ -67,7 +70,7 @@
           <div class="heading">Analysis</div>
           <div class="main-form">
             <!-- One Column -->
-            <div class="col-box">
+            <div class="container-fluid col-box">
               <span class="head-text">One Column</span>
               <div class="control">
                 <input class="txt-control" type="text" id="name" required>
@@ -87,7 +90,7 @@
             </div>
 
             <!-- Two column -->
-            <div class="col-box">
+            <div class="container-fluid col-box">
               <span class="head-text">Two Column</span>
               <div class="row"> 
                 <div class="col">
@@ -123,7 +126,7 @@
             </div>
 
             <!-- Three Column -->
-            <div class="col-box">
+            <div class="container-fluid col-box">
               <span class="head-text">Three Column</span>
               <div class="row">
                 <div class="col">
@@ -148,10 +151,10 @@
             </div>
 
             <!-- Four Column -->
-            <div class="col-box">
+            <div class="container-fluid  col-box">
               <span class="head-text">Four Column</span>
               <div class="row">
-                <div class="col">
+                <div class="col-sm-6">
                   <div class="control">
                     <input class="validate-control" type="text" id="designation" name="designation" value="UI Designer"
                       required>
@@ -159,20 +162,20 @@
                     <span>Enter Valid data</span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                   <div class="control">
                     <input class="info-control" type="text" id="name" required>
                     <label for="name">Name</label>
                     <span>Enter your full Name as per ID</span>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                   <div class="control">
                     <input class="txt-control" type="text" id="uname" name="uname" required value="JohnDoe">
                     <label for="uname">Username</label>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                   <div class="control">
                     <select class="dropdown-control">
                       <option>Select</option>

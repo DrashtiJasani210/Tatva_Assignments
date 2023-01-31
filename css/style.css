@@ -489,8 +489,8 @@ li span {
 
 /* Inner-Page CSS */
 .innerpage-container {
-  width: 1560px;
-  height: 1970px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 }
 
@@ -849,6 +849,7 @@ input[type="checkbox"] {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
   }
   Header:has(#check:checked) ~ .main {
     position: relative;
@@ -896,6 +897,16 @@ input[type="checkbox"] {
     width: 98%;
     align-self: center;
   }
+  /* Inner-Page */
+  .main-dashboard .main-form{
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 95%;
+    align-self: center;
+  }
+  .main-dashboard .main-form .col-box{
+    margin-bottom: 35px;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px){
  /* Dashboard-Header */
@@ -912,6 +923,7 @@ Header:has(#check:checked) ~ .main .side-bar {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 Header:has(#check:checked) ~ .main {
   position: relative;
@@ -964,6 +976,19 @@ Header .flex-right .right-panel{
   width: 98%;
   align-self: center;
 }
+/* Inner-Page */
+.main-dashboard .main-form{
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 95%;
+  align-self: center;
+}
+.main-dashboard .main-form .col-box{
+  margin-bottom: 35px;
+}
+.col-box p{
+  width: 95%;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* Login-Page */
@@ -990,6 +1015,7 @@ Header .flex-right .right-panel{
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
   }
   Header:has(#check:checked) ~ .main {
     position: relative;
@@ -1060,6 +1086,25 @@ Header .flex-right .right-panel{
     width: 95%;
     align-self: center;
   }
+  /* Inner-Page */
+.main-dashboard .main-form{
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 95%;
+  align-self: center;
+}
+.main-dashboard .main-form .col-box{
+  margin-bottom: 35px;
+}
+.col-box p{
+  width: 95%;
+}
+.main-form .col-box .control .validate-control ~ span{
+  padding-left: 0px;
+}
+.main-form .col-box .control .info-control ~ span{
+  padding-left: 0px;
+}
 }
 
 @media screen and (min-width: 641px) and (max-width: 767px) {
@@ -1188,6 +1233,25 @@ Header .flex-right .right-panel{
     width: 95%;
     align-self: center;
   }
+   /* Inner-Page */
+.main-dashboard .main-form{
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 95%;
+  align-self: center;
+}
+.main-dashboard .main-form .col-box{
+  margin-bottom: 35px;
+}
+.col-box p{
+  width: 95%;
+}
+.main-form .col-box .control .validate-control ~ span{
+  padding-left: 0px;
+}
+.main-form .col-box .control .info-control ~ span{
+  padding-left: 0px;
+}
 }
 
 @media screen and (min-width: 481px) and (max-width: 640px){
